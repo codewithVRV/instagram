@@ -27,9 +27,9 @@ function PostCardList () {
     }, [])
 
 
-    return (
+    return ( 
         <div className="post-wrapper">
-            {(postData.length == 0) ? "loading" : postData.map((post) => <PostCard 
+            {(postData.length == 0) ? <h1>Posts are Loading...</h1> : postData.map((post) => <PostCard 
         
                 key={post.id} fname={post.owner.firstName} lname={post.owner.lastName} img={post.image} 
                 pic={post.owner.picture} like={post.likes} date={post.publishDate}

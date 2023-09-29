@@ -10,25 +10,29 @@ function PostCard ({ fname, lname, pic, img, text, like, date, id }) {
 
     return (
         <>  
+            
             <div className="main">
                 <div className="upper">
                    
-                    <img src={pic} alt=''/>
-                    <div>
-                        <h5>{fname +" "+ lname}</h5>
-                        <p id='user-name'>{fname + "@admin" + Math.floor(Math.random() * 1000)}</p>
-                    </div>
+                    {/* <div> */}
+                        <img src={pic} alt=''/>
+                        <div>
+                            <h5>{fname +" "+ lname}</h5>
+                            <p id='user-name'>{fname + "@admin" + Math.floor(Math.random() * 1000)}</p>
+                        </div>
+                    {/* </div> */}
+                    
                 </div>
                 
                 <img  src={img} alt=''/>
                 <h4 id="title">{newText +"..."} </h4>
                 <div>
                     <div  className="bottom-section">
-                        {(!isLiked) ? <Link to={`/${id}`}>
+                        {(!isLiked) ? 
                             <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setIsLiked(!isLiked)} width="24" height="24" fill="currentColor" className="bi bi-heart" viewBox="0 0 16 16">
                             <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
                         </svg>
-                        </Link> : 
+                            : 
                         <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setIsLiked(!isLiked)} width="24" height="24" fill="currentColor" className="bi bi-heart-fill icon" viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                         </svg> }
@@ -38,9 +42,12 @@ function PostCard ({ fname, lname, pic, img, text, like, date, id }) {
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-send" viewBox="0 0 16 16">
                         <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-bookmark" viewBox="0 0 16 16">
-                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-                        </svg>
+                        <Link to={`post/${id}`}>
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-trash3 delete-post" viewBox="0 0 16 16">
+                            <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                        </svg> */}
+                        <p className='delete'>Delete</p>
+                        </Link>
                     </div>
                 <div>
                     
@@ -51,7 +58,6 @@ function PostCard ({ fname, lname, pic, img, text, like, date, id }) {
                     <h4 id='likes'>{like} likes</h4>
                 </div>
             </div>
-        
         </>
     )
 }
