@@ -1,0 +1,12 @@
+.card-list {
+    display: flex; /* Display children horizontally */
+    flex-wrap: nowrap; /* Prevent wrapping to the next row */
+    overflow-x: scroll; /* Enable horizontal scrolling if needed */
+    gap: 20px;
+    letter-spacing: .7px;
+    overflow-y: scroll;
+}
+
+.card-list::-webkit-scrollbar{
+    display: none;
+}

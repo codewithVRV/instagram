@@ -1,0 +1,28 @@
+.input-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.input-wrapper input{
+    height: 25px;
+    width: 20rem;
+    border-radius: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.btn {
+    border: none;
+    padding: 10px 22px;
+    height: 34px;
+    border-radius: 15px;
+    margin-top: 15px;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+}

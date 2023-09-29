@@ -1,0 +1,25 @@
+.header-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo{
+    height: 70px;
+    cursor: pointer;
+
+}
+
+.logo img {
+    height: 100%;
+}
+
+.btn {
+    border: none;
+    padding: 10px 22px;
+    height: 34px;
+    border-radius: 15px;
+    margin-top: 15px;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+}
