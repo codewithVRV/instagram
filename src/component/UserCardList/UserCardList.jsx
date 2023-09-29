@@ -14,40 +14,21 @@ function UserCardList () {
                 'app-id': import.meta.env.VITE_APP_ID,
             }
         })
-        // console.log("response is", response)
         setUserData([...response.data.data])
     }
-    // console.log("userData is", userData)
 
 
     useEffect(() => {
         downloadAllUserData()
     }, [])
 
-/**
-         * firstName
-        : 
-        "Sara"
-        id
-        : 
-        "60d0fe4f5311236168a109ca"
-        lastName
-        : 
-        "Andersen"
-        picture
-        : 
-        "https://randomuser.me/api/portraits/women/58.jpg"
-        title
-        : 
-        "ms"
- */
     return (
         <div className="card-list">
-                {userData.map((user) => <UserCard 
+                {(userData.length == 0) ? "Loading" : userData.map((user) => <UserCard 
                 
-                lname={user.lastName} pic={user.picture}
+                lastName={user.lastName} picture={user.picture}
 
-                key={user.id}/>)}
+                key={user.id} />)}
         </div>
     )   
 }

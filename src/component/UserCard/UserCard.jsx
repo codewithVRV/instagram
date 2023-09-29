@@ -1,16 +1,15 @@
 import './UserCard.css'
 
-function UserCard ({lname, pic}) {
+function UserCard ({ lastName, picture, id }) { 
+
 
     return (
-        <>
-                <div className="users">
-                    <img src={pic} alt="" />
-                    <p>{lname + "@" + Math.floor(Math.random() * 1000)}</p>
-                </div>
-                
         
-        </>
+                 <div className="users">
+                    <img src={picture} alt="" />
+                    <p>{lastName + "@" + Math.floor(Math.random() * 1000)}</p>
+                </div>
+
     )
 }
 
