@@ -36,7 +36,7 @@ function CreatePost () {
             <div className="input-wrapper">
                 <input type="text" value={postName}  onChange={(e) => setPostName(e.target.value) } placeholder="Enter Post Title here.."/>
                 <input type="text" value={imageName} onChange={(e) => setImageName(e.target.value)} placeholder="Enter the Url of image.."/>
-                <button className="btn" onClick={postCreate}>Submit</button>
+                <button className="btn1" onClick={postCreate}>Submit</button>
             </div>
         </>
     )

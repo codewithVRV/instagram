@@ -6,7 +6,6 @@ import toast from "react-hot-toast";
 function DeletePage () {
     const {id} = useParams()
     const navigator = useNavigate()
-    // console.log("id of pariticular post", id)
 
     async function postDeleted () {
         await axios.delete(`https://dummyapi.io/data/v1/post/${id}`, {
@@ -16,7 +15,6 @@ function DeletePage () {
         })
         navigator('/')
         toast.success("Post Deleted Successfully")
-        // console.log("response of a particular post", response.data.id)
 
     }
     useEffect(() => {
@@ -27,8 +25,7 @@ function DeletePage () {
     
     return (
         <>
-            {/* <h1>Data Deleted</h1>
-            <h2>id of Particular post: {id}</h2> */}
+           
 
         </>
     )

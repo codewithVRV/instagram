@@ -16,7 +16,7 @@
     font-size: 18px;
 }
 
-.btn {
+.btn1 {
     border: none;
     padding: 10px 22px;
     height: 34px;
@@ -25,4 +25,34 @@
     color: #fff;
     background-color: #000;
     cursor: pointer;
+}
+
+
+@media (max-width: 576px) { 
+    .input-wrapper {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .input-wrapper input{
+        height: 25px;
+        width: 32rem;
+        margin-top: 20px;
+        border: 1px solid black;
+    }
+    
+    .btn1 {
+        font-size: 17px;
+        letter-spacing: 1px;
+
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px){
+    .input-wrapper {
+        display: flex;
+        gap: 30px;
+        margin: 0 25px;
+    }
 }
