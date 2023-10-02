@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './PostCard.css'
 import { Link } from 'react-router-dom';
 
-function PostCard ({ fname, lname, pic, img, text, like, date, id }) {
+function PostCard ({ fname, lname, pic, img, text, like, id }) {
 
     const [isLiked, setIsLiked] = useState(false)
     const newText = text.substr(0, 15)
